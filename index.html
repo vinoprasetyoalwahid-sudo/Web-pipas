@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b1a">
+  <meta name="description" content="MatterQuest adalah website belajar IPAS tentang zat dan perubahannya.">
+  <title>MatterQuest | Belajar IPAS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#home" class="brand" data-page="home" aria-label="MatterQuest, kembali ke beranda">
+      <span class="brand-icon">M</span>
+      <span>Matter<span class="purple">Quest</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <button class="nav-link active" data-page="home">Beranda</button>
+      <button class="nav-link" data-page="materi">Materi</button>
+      <button class="nav-link" data-page="kuis">Kuis</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HALAMAN BERANDA -->
+    <section id="home" class="page active">
+      <div class="hero">
+        <div class="hero-content">
+          <span class="eyebrow"><span class="status-dot"></span> IPAS • KELAS 10</span>
+          <h1>Jelajahi Dunia<br><span class="gradient-text">Zat dan Perubahannya.</span></h1>
+          <p class="hero-description">
+            Pelajari materi di sekitar kita, pahami perubahan zat, dan uji
+            pengetahuanmu melalui petualangan sains interaktif.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary" data-page="materi">Mulai Belajar <span>→</span></button>
+            <button class="btn btn-secondary" data-page="kuis">Mulai Kuis</button>
+          </div>
+          <div class="hero-stats">
+            <div><strong>05</strong><span>Bab Materi</span></div>
+            <div><strong>15</strong><span>Soal Kuis</span></div>
+            <div><strong>100</strong><span>Skor Maksimal</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="science-core"><span>⚛</span></div>
+          <div class="float-card card-top"><span class="mini-icon">◈</span><div><strong>Materi</strong><small>Kenali sifat zat</small></div></div>
+          <div class="float-card card-bottom"><span class="mini-icon green">✓</span><div><strong>Challenge</strong><small>Uji kemampuanmu</small></div></div>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div><span class="eyebrow">MULAI PETUALANGAN</span><h2>Jalur Pembelajaran</h2></div>
+        <p>Pelajari konsepnya, lalu buktikan pemahamanmu.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon purple-bg">01</div><h3>Pelajari Materi</h3>
+          <p>Pahami konsep zat, wujud, komposisi, perubahan, dan pemisahannya.</p>
+          <button class="text-button" data-page="materi">Buka materi →</button>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon blue-bg">02</div><h3>Uji Pengetahuan</h3>
+          <p>Jawab 15 soal pilihan ganda untuk menguji pemahamanmu.</p>
+          <button class="text-button" data-page="kuis">Kerjakan kuis →</button>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon green-bg">03</div><h3>Lihat Hasil</h3>
+          <p>Dapatkan nilai akhir, evaluasi, dan pembahasan setiap jawaban.</p>
+          <button class="text-button" data-page="kuis">Mulai tantangan →</button>
+        </article>
+      </div>
+      <div class="info-banner">
+        <div><span class="eyebrow">SCIENCE KNOWLEDGE</span><h2>Materi ada di sekitar kita.</h2>
+          <p>Air yang membeku, besi yang berkarat, hingga garam yang larut merupakan contoh fenomena zat yang bisa kita pelajari.</p>
+        </div><span class="banner-symbol" aria-hidden="true">✧</span>
+      </div>
+
+      <section class="team-section" aria-labelledby="team-title">
+        <div class="section-heading">
+          <div><span class="eyebrow">TIM PENGEMBANG</span><h2 id="team-title">Kelompok <span class="gradient-text">9</span></h2></div>
+          <p>Media pembelajaran IPAS: Zat dan Perubahannya.</p>
+        </div>
+        <div class="team-grid">
+          <article class="team-member"><span class="member-number">01</span><div><strong>Sultan</strong><small>Anggota Kelompok</small></div></article>
+          <article class="team-member"><span class="member-number">02</span><div><strong>Vino</strong><small>Anggota Kelompok</small></div></article>
+          <article class="team-member"><span class="member-number">03</span><div><strong>Zacky</strong><small>Anggota Kelompok</small></div></article>
+          <article class="team-member"><span class="member-number">04</span><div><strong>Wangi</strong><small>Anggota Kelompok</small></div></article>
+        </div>
+      </section>
+    </section>
+
+    <!-- HALAMAN MATERI: isinya dibuat dari data di script.js -->
+    <section id="materi" class="page">
+      <div class="page-heading">
+        <span class="eyebrow">KNOWLEDGE CENTER</span>
+        <h1>Materi <span class="gradient-text">Pembelajaran</span></h1>
+        <p>Pelajari setiap bab secara berurutan sebelum mengikuti kuis.</p>
+      </div>
+      <div class="learning-progress">
+        <div><strong>Materi Zat dan Perubahannya</strong><span>5 bab pembelajaran</span></div>
+        <span class="progress-label">IPAS X</span>
+      </div>
+      <div id="material-list" class="material-list"></div>
+      <div class="quiz-cta">
+        <div><h2>Siap menguji pemahamanmu?</h2><p>Selesaikan materi, lalu kerjakan tantangan MatterQuest.</p></div>
+        <button class="btn btn-primary" data-page="kuis">Mulai Kuis →</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="brand footer-brand"><span class="brand-icon">M</span><span>Matter<span class="purple">Quest</span></span></div>
+    <p>Media pembelajaran IPAS • Zat dan Perubahannya</p>
+    <small>Dibuat untuk pembelajaran kelas 10. Materi dapat disesuaikan dengan modul dari guru.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
