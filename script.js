@@ -6,7 +6,7 @@ const materials = [
     sections: [
       {
         heading: "Apa itu zat atau materi?",
-        body: "Materi adalah segala sesuatu yang mempunyai massa dan menempati ruang. Materi dapat ditemukan dalam benda di sekitar kita, misalnya air, udara, batu, dan kayu."
+        body: "Zat(Materi) adalah segala sesuatu yang mempunyai massa dan menempati ruang. Materi dapat ditemukan dalam benda di sekitar kita, misalnya air, udara, batu, dan kayu."
       },
       {
         heading: "Massa dan volume",
@@ -29,19 +29,19 @@ const materials = [
     sections: [
       {
         heading: "Tiga wujud zat yang umum",
-        body: "Zat padat memiliki bentuk dan volume relatif tetap. Zat cair memiliki volume relatif tetap tetapi bentuk mengikuti wadah. Gas tidak memiliki bentuk maupun volume tetap dan mengisi ruang yang ditempatinya."
+        body: "Zat padat memiliki bentuk dan volume relatif tetap. Zat cair memiliki volume relatif tetap tetapi bentuk mengikuti wadah. Gas tidak memiliki bentuk maupun volume tetap karena sifat gas yaitu mengisi ruang yang ditempatinya."
       },
       {
         heading: "Partikel zat",
-        body: "Pada zat padat, partikel tersusun rapat dan bergetar di tempat. Pada zat cair, partikel lebih bebas bergerak. Pada gas, partikel berjauhan dan bergerak bebas."
+        body: "Pada zat padat, partikel tersusun rapat dan dan gaya tarik antar partikel sangat kuat. Pada zat cair, partikel tersusun tidak terlalu rapat dan gaya tarik antar partikel rendah. Pada gas, partikel berjauhan dan gaya tarik antar partikel sangat rendah."
       },
       {
         heading: "Enam perubahan wujud",
-        body: "Mencair: padat menjadi cair. Membeku: cair menjadi padat. Menguap: cair menjadi gas. Mengembun: gas menjadi cair. Menyublim: padat menjadi gas. Mengkristal atau deposisi: gas menjadi padat."
+        body: "Mencair: padat → cair. Membeku: cair → padat. Menguap: cair → gas. Mengembun: gas → cair. Menyublim: padat → gas. Mengkristal atau deposisi: gas → padat."
       },
       {
         heading: "Peran kalor",
-        body: "Mencair, menguap, dan menyublim umumnya menyerap kalor. Membeku, mengembun, dan mengkristal umumnya melepaskan kalor. Perubahan wujud tidak menghasilkan jenis zat baru."
+        body: "Mencair, menguap, dan menyublim umumnya menyerap kalor. Membeku, mengembun, dan mengkristal umumnya melepaskan kalor. Kalor merupakan bentuk energi panas yang berpindah dari benda bersuhu tinggi ke benda bersuhu rendah."
       }
     ],
     example: "Es batu yang mencair menjadi air adalah perubahan wujud mencair. Uap air yang membentuk titik-titik air pada permukaan gelas dingin adalah mengembun."
@@ -79,11 +79,11 @@ const materials = [
     sections: [
       {
         heading: "Perubahan fisika",
-        body: "Perubahan fisika mengubah bentuk, ukuran, atau wujud zat tanpa membentuk zat baru. Contohnya es mencair, kertas dipotong, dan gula larut dalam air."
+        body: "Perubahan fisika mengubah bentuk, ukuran, atau wujud zat tanpa menghasilkan zat baru. Contohnya es mencair, kertas dipotong, dan gula larut dalam air."
       },
       {
         heading: "Perubahan kimia",
-        body: "Perubahan kimia menghasilkan satu atau lebih zat baru dengan sifat yang berbeda. Contohnya besi berkarat, kayu terbakar, dan makanan membusuk."
+        body: "Perubahan kimia menghasilkan satu atau lebih zat baru dengan sifat yang berbeda dari hasil reaksi antar 2 zat. Contohnya besi berkarat, kayu terbakar, dan kertas hangus."
       },
       {
         heading: "Tanda-tanda reaksi kimia",
@@ -110,7 +110,7 @@ const materials = [
       },
       {
         heading: "Distilasi atau penyulingan",
-        body: "Distilasi memanfaatkan perbedaan titik didih. Komponen yang menguap kemudian didinginkan agar mengembun dan dapat ditampung."
+        body: "Distilasi(Penyulingan) memanfaatkan perbedaan titik didih. Komponen yang menguap kemudian didinginkan agar mengembun dan dapat ditampung."
       },
       {
         heading: "Kromatografi",
