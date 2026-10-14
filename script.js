@@ -1,11 +1,4 @@
-/* =========================================================
-   MATTERQUEST - SCRIPT.JS
-   Bagian ini mengatur isi materi, navigasi, kuis, dan skor.
-   ========================================================= */
-
-/* 1. DATA MATERI
-   Setiap objek mewakili satu bab. Teksnya ditampilkan otomatis
-   oleh fungsi renderMaterials() di halaman Materi. */
+/* 1. data materi */
 const materials = [
   {
     title: "Mengenal Zat dan Materi",
@@ -132,9 +125,7 @@ const materials = [
   }
 ];
 
-/* 2. DATA SOAL KUIS
-   correct: indeks jawaban benar (0=A, 1=B, 2=C, 3=D).
-   explanation: penjelasan singkat yang muncul setelah menjawab. */
+/* 2. data quest */
 const questions = [
   {
     category: "Bab 1 • Mengenal Zat",
@@ -243,8 +234,7 @@ const questions = [
   }
 ];
 
-/* 3. MENGAMBIL ELEMEN HTML
-   Variabel di bawah menghubungkan JavaScript dengan elemen HTML. */
+/* 3. lokasi kode */
 const pages = document.querySelectorAll(".page");
 const navLinks = document.querySelectorAll("[data-page]");
 const materialList = document.getElementById("material-list");
@@ -264,14 +254,13 @@ const feedbackBox = document.getElementById("feedback-box");
 const quizProgress = document.getElementById("quiz-progress");
 const answerStatus = document.getElementById("answer-status");
 
-/* 4. VARIABEL KEADAAN KUIS */
+/* 4. variabel quest */
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let hasAnswered = false;
 let answerHistory = [];
 
-/* 5. NAVIGASI HALAMAN
-   Menyembunyikan semua halaman lalu menampilkan halaman yang dipilih. */
+/* 5. navigasi halaman */
 function showPage(pageId) {
   pages.forEach(function(page) {
     page.classList.toggle("active", page.id === pageId);
@@ -284,13 +273,13 @@ function showPage(pageId) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-/* Tombol dengan atribut data-page akan membuka halaman sesuai nilainya. */
+/* Tombol dengan atribut data-page. */
 navLinks.forEach(function(link) {
   link.addEventListener("click", function(event) {
     event.preventDefault();
     const destination = link.dataset.page;
 
-    // Kuis dibuka sebagai halaman terpisah agar menu materi tidak tersedia di sana.
+    // Kuis dibuka sebagai halaman terpisah.
     if (destination === "kuis") {
       window.location.href = "quiz.html";
       return;
@@ -300,8 +289,7 @@ navLinks.forEach(function(link) {
   });
 });
 
-/* 6. MENAMPILKAN DAFTAR MATERI DAN HALAMAN DETAIL
-   Setiap bab memiliki file HTML sendiri: materi-1.html sampai materi-5.html. */
+/* 6. navigasi halaman materi. */
 function renderMaterials() {
   if (materialList) {
     materialList.innerHTML = "";
@@ -327,7 +315,7 @@ function renderMaterials() {
   renderMaterialDetail();
 }
 
-/* Menampilkan isi bab yang sesuai dengan file materi yang sedang dibuka. */
+/* menampilkan isi bab yang sesuai dengan file materi yang sedang dibuka. */
 function renderMaterialDetail() {
   const detailContainer = document.getElementById("material-detail");
   if (!detailContainer) return;
@@ -390,8 +378,7 @@ function renderMaterialDetail() {
   });
 }
 
-/* 7. MEMULAI ATAU MENGULANG KUIS
-   Semua nilai diatur kembali ke kondisi awal. */
+/* 7. perulangan quest */
 function startQuiz() {
   currentQuestionIndex = 0;
   correctAnswers = 0;
@@ -405,7 +392,7 @@ function startQuiz() {
   renderQuestion();
 }
 
-/* 8. MENAMPILKAN SATU SOAL DAN PILIHAN JAWABAN */
+/* 8. tampilan soal */
 function renderQuestion() {
   const question = questions[currentQuestionIndex];
   hasAnswered = false;
@@ -441,8 +428,7 @@ function renderQuestion() {
   });
 }
 
-/* 9. MEMERIKSA JAWABAN
-   Jawaban dikunci setelah dipilih agar tidak bisa dihitung berkali-kali. */
+/* 9. navigasi nilai */
 function checkAnswer(selectedIndex) {
   if (hasAnswered) return;
 
@@ -486,7 +472,7 @@ function checkAnswer(selectedIndex) {
   nextQuestionButton.disabled = false;
 }
 
-/* 10. BERPINDAH KE SOAL BERIKUTNYA ATAU HASIL AKHIR */
+/* 10. perpindahan soal */
 function goToNextQuestion() {
   if (!hasAnswered) return;
 
@@ -499,7 +485,7 @@ function goToNextQuestion() {
   }
 }
 
-/* 11. MENAMPILKAN SKOR DAN ULASAN JAWABAN */
+/* 11. menampilkan jawaban benar/salah */
 function showResults() {
   quizArea.classList.add("hidden");
   quizResult.classList.remove("hidden");
@@ -547,21 +533,16 @@ function showResults() {
 
   quizProgress.style.width = "100%";
 }
-
-/* 12. MENGHUBUNGKAN TOMBOL KUIS DENGAN FUNGSI */
 if (startQuizButton) startQuizButton.addEventListener("click", startQuiz);
 if (restartQuizButton) restartQuizButton.addEventListener("click", startQuiz);
 if (nextQuestionButton) nextQuestionButton.addEventListener("click", goToNextQuestion);
-
-/* 13. MENJALANKAN FUNGSI AWAL SAAT WEBSITE DIBUKA */
 renderMaterials();
 if (window.location.pathname.endsWith("index.html") && window.location.hash === "#materi") {
   showPage("materi");
 }
 
 
-/* 11. SIMULASI INTERAKTIF (simulasi.html)
-   Simulasi berbentuk model visual sederhana untuk membantu menjelaskan konsep. */
+/* 11. function simulasi */
 (function setupSimulations() {
   const carousel = document.getElementById("physical-carousel");
   if (carousel) {
