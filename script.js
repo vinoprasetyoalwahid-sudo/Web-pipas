@@ -21,7 +21,7 @@ const materials = [
         body: "Sifat intensif tidak bergantung pada jumlah zat, contohnya suhu dan massa jenis. Sifat ekstensif bergantung pada jumlah zat, contohnya massa dan volume."
       }
     ],
-    example: "Air dalam gelas memiliki massa dan menempati ruang. Warna air merupakan sifat fisika, sedangkan kemampuan bahan tertentu untuk bereaksi dengan asam merupakan sifat kimia."
+    example: "Air dalam gelas memiliki massa dan menempati ruang. Wujud air merupakan sifat fisika, sedangkan kemampuan bahan tertentu untuk bereaksi dengan air tersebut merupakan sifat kimia."
   },
   {
     title: "Wujud Zat dan Perubahannya",
