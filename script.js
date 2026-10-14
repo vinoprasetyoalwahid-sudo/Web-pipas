@@ -1,11 +1,4 @@
-/* =========================================================
-   MATTERQUEST - SCRIPT.JS
-   Bagian ini mengatur isi materi, navigasi, kuis, dan skor.
-   ========================================================= */
-
-/* 1. DATA MATERI
-   Setiap objek mewakili satu bab. Teksnya ditampilkan otomatis
-   oleh fungsi renderMaterials() di halaman Materi. */
+ Materi. */
 const materials = [
   {
     title: "Mengenal Zat dan Materi",
