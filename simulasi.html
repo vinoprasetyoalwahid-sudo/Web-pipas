@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b1a">
+  <meta name="description" content="Simulasi interaktif perubahan fisika, kimia, dan biologi di MatterQuest.">
+  <title>Simulasi Interaktif | MatterQuest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="simulation-body">
+  <header class="navbar">
+    <a href="index.html" class="brand" aria-label="Kembali ke beranda MatterQuest"><span class="brand-icon">M</span><span>Matter<span class="purple">Quest</span></span></a>
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <a class="nav-link" href="index.html">Beranda</a>
+      <a class="nav-link" href="index.html#materi">Materi</a>
+      <a class="nav-link active" href="simulasi.html">Simulasi</a>
+      <a class="nav-link" href="quiz.html">Kuis</a>
+    </nav>
+  </header>
+  <main class="simulation-main">
+    <section class="simulation-hero">
+      <span class="eyebrow">INTERACTIVE SCIENCE LAB</span>
+      <h1>Simulasi <span class="gradient-text">Perubahan Zat</span></h1>
+      <p>Geser kartu ke samping, pilih simulasi, lalu tekan tombol untuk melihat gambaran perubahan zat. Animasi ini merupakan model sederhana untuk membantu memahami konsep, bukan percobaan laboratorium sungguhan.</p>
+      <div class="simulation-legend"><span><i class="legend-dot physical"></i> Fisika</span><span><i class="legend-dot chemical"></i> Kimia</span><span><i class="legend-dot biological"></i> Biologi</span></div>
+    </section>
+
+    <section class="simulation-section" aria-labelledby="physical-title">
+      <div class="section-heading simulation-heading"><div><span class="eyebrow">01 • PERUBAHAN WUJUD</span><h2 id="physical-title">Perubahan Fisika</h2></div><p>Tidak menghasilkan zat baru; zat berubah wujud atau bentuk.</p></div>
+      <div class="carousel-controls"><span>Geser kartu untuk melihat 6 simulasi</span><div><button class="carousel-arrow" data-scroll="physical-carousel" data-direction="-1" aria-label="Geser ke kiri">←</button><button class="carousel-arrow" data-scroll="physical-carousel" data-direction="1" aria-label="Geser ke kanan">→</button></div></div>
+      <div id="physical-carousel" class="simulation-carousel" tabindex="0" aria-label="Kartu simulasi perubahan fisika">
+        <article class="simulation-card physical-card" data-sim="condense"><div class="sim-card-heading"><span class="sim-number">01</span><span class="sim-type physical-tag">Perubahan Fisika</span></div><h3>Mengembun</h3><p class="sim-definition">Gas → cair</p><div class="sim-stage" aria-label="Ilustrasi uap menjadi titik air"><div class="state-side gas-state"><span class="state-label">Gas</span><div class="particles many loose"></div></div><span class="state-arrow">→</span><div class="state-side liquid-state"><span class="state-label">Cair</span><div class="particles many close"></div></div></div><p class="sim-caption">Uap air mendingin lalu menjadi titik-titik air.</p><button class="btn btn-primary run-sim">Jalankan simulasi ▶</button></article>
+        <article class="simulation-card physical-card" data-sim="freeze"><div class="sim-card-heading"><span class="sim-number">02</span><span class="sim-type physical-tag">Perubahan Fisika</span></div><h3>Membeku</h3><p class="sim-definition">Cair → padat</p><div class="sim-stage"><div class="state-side liquid-state"><span class="state-label">Cair</span><div class="particles many close"></div></div><span class="state-arrow">→</span><div class="state-side solid-state"><span class="state-label">Padat</span><div class="particles many grid-particles"></div></div></div><p class="sim-caption">Cairan kehilangan kalor dan menjadi padat.</p><button class="btn btn-primary run-sim">Jalankan simulasi ▶</button></article>
+        <article class="simulation-card physical-card" data-sim="crystallize"><div class="sim-card-heading"><span class="sim-number">03</span><span class="sim-type physical-tag">Perubahan Fisika</span></div><h3>Mengkristal</h3><p class="sim-definition">Gas → padat</p><div class="sim-stage"><div class="state-side gas-state"><span class="state-label">Gas</span><div class="particles many loose"></div></div><span class="state-arrow">→</span><div class="state-side solid-state"><span class="state-label">Padat</span><div class="particles many grid-particles"></div></div></div><p class="sim-caption">Gas berubah langsung menjadi padatan/kristal.</p><button class="btn btn-primary run-sim">Jalankan simulasi ▶</button></article>
+        <article class="simulation-card physical-card" data-sim="evaporate"><div class="sim-card-heading"><span class="sim-number">04</span><span class="sim-type physical-tag">Perubahan Fisika</span></div><h3>Menguap</h3><p class="sim-definition">Cair → gas</p><div class="sim-stage"><div class="state-side liquid-state"><span class="state-label">Cair</span><div class="particles many close"></div></div><span class="state-arrow">→</span><div class="state-side gas-state"><span class="state-label">Gas</span><div class="particles many loose"></div></div></div><p class="sim-caption">Partikel cair memperoleh energi lalu menyebar menjadi gas.</p><button class="btn btn-primary run-sim">Jalankan simulasi ▶</button></article>
+        <article class="simulation-card physical-card" data-sim="melt"><div class="sim-card-heading"><span class="sim-number">05</span><span class="sim-type physical-tag">Perubahan Fisika</span></div><h3>Mencair</h3><p class="sim-definition">Padat → cair</p><div class="sim-stage"><div class="state-side solid-state"><span class="state-label">Padat</span><div class="particles many grid-particles"></div></div><span class="state-arrow">→</span><div class="state-side liquid-state"><span class="state-label">Cair</span><div class="particles many close"></div></div></div><p class="sim-caption">Padatan menyerap kalor dan berubah menjadi cair.</p><button class="btn btn-primary run-sim">Jalankan simulasi ▶</button></article>
+        <article class="simulation-card physical-card" data-sim="sublime"><div class="sim-card-heading"><span class="sim-number">06</span><span class="sim-type physical-tag">Perubahan Fisika</span></div><h3>Menyublim</h3><p class="sim-definition">Padat → gas</p><div class="sim-stage"><div class="state-side solid-state"><span class="state-label">Padat</span><div class="particles many grid-particles"></div></div><span class="state-arrow">→</span><div class="state-side gas-state"><span class="state-label">Gas</span><div class="particles many loose"></div></div></div><p class="sim-caption">Padatan berubah langsung menjadi gas tanpa menjadi cair.</p><button class="btn btn-primary run-sim">Jalankan simulasi ▶</button></article>
+      </div>
+      <p class="scroll-hint">Tip: di HP, geser kartu ke kiri atau kanan dengan jari.</p>
+    </section>
+
+    <section class="simulation-section" aria-labelledby="chemical-title">
+      <div class="section-heading simulation-heading"><div><span class="eyebrow">02 • TERBENTUK ZAT BARU</span><h2 id="chemical-title">Simulasi Perubahan Kimia</h2></div><p>Perubahan kimia menghasilkan zat baru dengan sifat berbeda.</p></div>
+      <div class="process-grid">
+        <article class="process-card" data-process="rust"><span class="sim-type chemical-tag">Perubahan Kimia</span><div class="process-visual"><span class="process-icon">🔩</span><span class="process-arrow">→</span><span class="process-icon product-icon">🟤</span></div><h3>Besi Berkarat</h3><p>Besi bereaksi dengan oksigen dan air, membentuk karat berwarna cokelat kemerahan.</p><div class="process-status">Sebelum: besi mengilap · Sesudah: karat</div><button class="btn btn-secondary run-process">Lihat perubahan</button></article>
+        <article class="process-card" data-process="burn"><span class="sim-type chemical-tag">Perubahan Kimia</span><div class="process-visual"><span class="process-icon">🕯️</span><span class="process-arrow">→</span><span class="process-icon product-icon">✨</span></div><h3>Pembakaran Lilin</h3><p>Lilin meleleh adalah perubahan fisika, sedangkan pembakaran uap lilin menghasilkan zat baru.</p><div class="process-status">Amati: nyala dan hasil reaksi pembakaran</div><button class="btn btn-secondary run-process">Lihat perubahan</button></article>
+        <article class="process-card" data-process="reaction"><span class="sim-type chemical-tag">Perubahan Kimia</span><div class="process-visual"><span class="process-icon">🧪</span><span class="process-arrow">→</span><span class="process-icon product-icon">🫧</span></div><h3>Reaksi Menghasilkan Gas</h3><p>Model reaksi larutan menunjukkan terbentuknya gelembung gas sebagai salah satu tanda reaksi kimia.</p><div class="process-status">Amati: munculnya gelembung gas</div><button class="btn btn-secondary run-process">Lihat perubahan</button></article>
+      </div>
+    </section>
+
+    <section class="simulation-section" aria-labelledby="bio-title">
+      <div class="section-heading simulation-heading"><div><span class="eyebrow">03 • MELIBATKAN MAKHLUK HIDUP</span><h2 id="bio-title">Simulasi Perubahan Biologi</h2></div><p>Perubahan yang melibatkan organisme atau aktivitas biologis; dapat disertai reaksi kimia.</p></div>
+      <div class="process-grid">
+        <article class="process-card" data-process="ferment"><span class="sim-type biological-tag">Perubahan Biologi</span><div class="process-visual"><span class="process-icon">🥣</span><span class="process-arrow">→</span><span class="process-icon product-icon">🍞</span></div><h3>Fermentasi Adonan</h3><p>Ragi sebagai mikroorganisme membantu menghasilkan gas yang membuat adonan mengembang.</p><div class="process-status">Amati: adonan bertambah mengembang</div><button class="btn btn-secondary run-process">Lihat perubahan</button></article>
+        <article class="process-card" data-process="ripen"><span class="sim-type biological-tag">Perubahan Biologi</span><div class="process-visual"><span class="process-icon">🍏</span><span class="process-arrow">→</span><span class="process-icon product-icon">🍎</span></div><h3>Pematangan Buah</h3><p>Selama pematangan, proses biologis mengubah warna, aroma, tekstur, dan rasa buah.</p><div class="process-status">Amati: warna dan tekstur berubah</div><button class="btn btn-secondary run-process">Lihat perubahan</button></article>
+        <article class="process-card" data-process="decompose"><span class="sim-type biological-tag">Perubahan Biologi</span><div class="process-visual"><span class="process-icon">🍂</span><span class="process-arrow">→</span><span class="process-icon product-icon">🌱</span></div><h3>Penguraian Daun</h3><p>Mikroorganisme menguraikan sisa makhluk hidup menjadi bahan lebih sederhana di lingkungan.</p><div class="process-status">Amati: sisa daun menjadi bagian dari kompos</div><button class="btn btn-secondary run-process">Lihat perubahan</button></article>
+      </div>
+    </section>
+    <div class="simulation-note"><strong>Catatan sains:</strong> mengembun, membeku, mengkristal, menguap, mencair, dan menyublim adalah perubahan fisika (perubahan wujud), bukan perubahan kimia. Simulasi kimia dan biologi ditampilkan terpisah agar perbedaannya mudah dipahami.</div>
+    <div class="simulation-footer-actions"><a class="btn btn-secondary" href="index.html#materi">← Kembali ke Materi</a><a class="btn btn-primary" href="quiz.html">Uji Pemahaman →</a></div>
+  </main>
+  <footer class="footer"><div class="brand footer-brand"><span class="brand-icon">M</span><span>Matter<span class="purple">Quest</span></span></div><p>Simulasi Interaktif • Kelompok 9</p><small>Model visual pembelajaran IPAS kelas 10.</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
